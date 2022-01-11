@@ -1,0 +1,7 @@
+<div>
+    <div class="content-box" *ngFor="let survey of surveys">
+        <a routerLink="/questions/{{survey.id}}">
+            <h3>{{survey.title}} - {{survey.description}}</h3>
+        </a>
+    </div>
+</div>
