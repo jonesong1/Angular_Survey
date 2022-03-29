@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Questions, Options } from '../types';
+import { Questions } from '../types';
 import { fakeQuestions } from '../fake-data';
-import { fakeOptions } from '../fake-data';
 
 @Component({
   selector: 'app-questions',
@@ -12,8 +11,9 @@ import { fakeOptions } from '../fake-data';
 
 export class QuestionsComponent implements OnInit {
   questions: Questions[] = [];
-  options: Options[] = [];
-
+  
+  currentQuestionId = '';
+  
   constructor(
     private route: ActivatedRoute,
   ) { }
@@ -21,10 +21,6 @@ export class QuestionsComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.questions = fakeQuestions.filter(questions => questions.surveyId === id);
-
-    
-    // this.options = fakeOptions.filter(options => options.questionId === this.questions.id);
-    // console.log(this.options);
   }
 
 }

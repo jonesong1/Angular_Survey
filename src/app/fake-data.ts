@@ -4,7 +4,7 @@ export const fakeUsers: Users[] = [{
     id: '123',
     firstName: 'Tim',
     lastName: 'Ong',
-    email: 'ong@test.com',
+    email: 'test@test.com',
 }, {
     id: '345',
     firstName: 'John',

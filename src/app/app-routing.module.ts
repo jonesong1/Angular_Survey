@@ -7,8 +7,8 @@ import { QuestionsComponent } from './questions/questions.component';
 const routes: Routes = [
   { path: '', redirectTo: '/surveys', pathMatch: 'full' },
   { path: 'surveys', component: SurveysComponent, pathMatch: 'full' },
-  { path: 'questions/:id', component: QuestionsComponent },
-  
+  { path: 'surveys/:id', component: QuestionsComponent },
+  { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
 ];
 
 @NgModule({
